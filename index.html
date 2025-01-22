@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="JobApplicationForm">
+            <h1> Job Application Form</h1>
+            <hr> <br>
+            <p>! All fields mendatory.Please enter NA where not applicable.</p>
+            <br>1.
+            <div class="upload-photo" id="dropZone">
+                <br>  <br>
+                <div class="upload-box">
+                    <label for="photo"><img src="upload-image-icon-png-26.jpg" alt=""></label>
+                    <input type="file" name="my photo " id="photo" accept="img/*" hidden>
+                </div>
+            </div>
+            <br> 2.
+            <div>
+                <input type="text" value="TBMSJAFREG88041" readonly>
+            </div>
+            <br>3. <div>
+                <label for="datetime-local"></label>
+                <input type="datetime-local" name="date" id="datetime-local">
+            </div>
+            <br>4.
+            <div>
+                <label for="post"></label>
+                <select name="post" id="post">
+                    <option value="post">Select Post Applied For</option>
+                    <option value="teaching">TEACHING</option>
+                    <option value="non teaching">NON TEACHING</option>
+                    <option value="transport">TRANSPORT</option>
+                    <option value="staff support">STAFF SUPPORT</option>
+
+                </select>
+            </div>
+            <br>5.
+            <div>
+                <label for="preffered-subject"></label>
+                <input type="text" id="preffered-subject" placeholder="PREFFERED SUBJECTS">
+
+            </div>
+            <br> 6.
+            <div>
+                <input type="text" placeholder="FULL NAME(S PER PAN CARD)">
+            </div>
+            <br>7.
+            <div>
+                <input type="text" placeholder="*PARENTAGE">
+            </div>
+            <br>8.
+            <div>
+                <label for="dob"></label>
+                <input type="date" name="dob" id="dob" onchange="calculateAge()"
+                    placeholder="DATE OF BIRTH(AS PER 10TH CERTIFICATE)">
+            </div>
+            <br>9.
+            <div>
+                <label for="age"></label>
+                <input type="text" id="age" name="my age" placeholder="MY CURRENT AGE">
+            </div>
+            <br> 10.
+            <div>
+                <label for="gender"></label>
+                <select name="my gender" id="gender">
+                    <option value="gen">GENDER</option>
+                    <option value="MALE">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                    <option value="OTHERS">OTHER</option>
+                </select>
+            </div>
+            <br>11. <div>
+                <label for="religion"></label>
+                <select name="my religion" id="religion">
+                    <option value="re">RELIGION</option>
+                    <option value="islam">ISLAM</option>
+                    <option value="hin">HINDUISM</option>
+                    <option value="chr">CHRISTIANITY</option>
+                    <option value="sik">SIKHISM</option>
+                    <option value="budd">BUDDHISM</option>
+                    <option value="jain">JAINISM</option>
+                </select>
+            </div>
+            <br>12.
+            <div>
+                <select name="marital" id="marital">
+                    <option value="SE">SELECT MARITAL STATUS</option>
+                    <option value="SIN">SINGLE</option>
+                    <option value="MAR">MARRIAGE</option>
+                    <option value="DIV">DIVORCED</option>
+                    <option value="SEP">SEPRATED</option>
+                    <option value="WID">WIDOWED</option>
+
+
+                </select>
+            </div>
+            <br>13.
+            <div>
+                <select name="country" id="country">
+                    <option value="">Select Country</option>
+                    <option value="">India</option>
+                </select>
+            </div>
+            <br>14.
+            <div>
+                <label for="state"></label>
+                <select id="state" onchange="loadCities()">
+                    <option value="" selected>Select State</option>
+                </select>
+            </div>
+            <br>15.
+            <div>
+
+                <label for="city"></label>
+                <select id="city">
+                    <option value="" selected>Select City</option>
+                </select>
+            </div>
+            <br>16.
+            <div>
+                <input type="text" placeholder="*MOHALLA/COLONY">
+
+            </div>
+            <br>17
+            <div>
+                <input type="text" placeholder=*LANDMARK>
+            </div>
+            <br>18.
+            <div>
+                <input type="text" placeholder="LANE NO">
+            </div>
+            <br>19.
+            <div>
+                <input type="text" placeholder="*HOUSE NO">
+            </div>
+            <br>20.
+            <div>
+                <input type="number" placeholder="PIN CODE">
+            </div>
+            <br>21
+            <div>
+                <input type="email" name="youremail" id="email" placeholder="email">
+            </div>
+            <br>22.
+            <div>
+                <input type="number" name="" id="number" placeholder="MOBILE NUMBER">
+            </div>
+            <br>23.
+            <div>
+                <input type="number" placeholder="AADHAR NO">
+            </div>
+            <br>24.
+            <div>
+                <input type="text" placeholder="PAN NO">
+            </div>
+            <br>25.
+            <div>
+                <input type="text" placeholder="PASSPORT NO.">
+
+            </div>
+            <br>26
+            <div>
+                <input type="number" placeholder="ALTERNATIVE MOBILE NO.">
+            </div>
+            <br>27.
+            <br><input type="text" placeholder="ANY RELATIVE WORK WITH US">
+            <br><br><br>28.
+            <div>
+                <input type="text" placeholder="TIME PEROID REQUIRED BEFORE JOINING">
+            </div>
+            <br><br>29.*upload Aadhar Card
+            <br><input type="file" name="aadhar" id="aadhar">
+
+            <br><br>30.
+            <br><input type="file" name="pan" id="PAN">
+            <br><br>31. *Upload Passport
+            <br><input type="file">
+            <br><br>32. *Do you how to swim?<br>
+            <div><select name="swim" id="swim">
+                    <option value="">Select Option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+            <br>33. *have you applied for any govt. job within the two last 2 years?
+            <div><select name="govt" id="govt">
+                    <option value="">Select Option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+            <br>34. *Do you have child studying inour institutions?
+            <div><select name="child" id="child">
+                    <option value="">Select Option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+            <br>35. Fluency In Speaking/Written English
+            <div><select name="eng" id="eng">
+                    <option value="">Select Option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+            <br>36. *Do you Run/Own Academy/Caching Centre?
+            <div><select name="own" id="own">
+                    <option value="">Select Option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select> <br>
+                <br>37.*Are You an Alumni of this School? (if yes,which year)
+                <br> <input type="text">
+            </div>
+            <br> 38. * Educational Qualification (The documen image to be uploaded must be of high quality and colored)
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Examination Passed</th>
+                            <th>Year Of Passing School/University</th>
+                            <th>Subjects/Course</th>
+                            <th>Marks %age</th>
+                            <th>Document Attached</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SEC EXAMINATION</td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+
+                            <td>
+                                <input type="file" name="" id="">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>H.SEC EXAMINATION</td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td>SEC EXAMINATION</td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td>GRADUTION</td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td>POST GRADUATION</td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="file"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>39.*Other Educational Qualification(write NA where not applicable)
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name Of Course</th>
+                            <th>Year Of Passing</th>
+                            <th>School/University</th>
+                            <th>Course</th>
+                            <th>Marks %age</th>
+
+                        </tr>
+                    <tbody>
+                        <tr>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+
+                        </tr>
+                        <tr>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                        </tr>
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+            <br>
+            <h3>40.*Present Employement (if currently emplyed)
+                please enter NA where not Applicable</h3>
+            <div class="upload-rectangle">
+                <br> *Employers name(if applicable) <br><br>
+                <input type="text">
+
+
+                <br> <br> *Employers Address <br><br>
+                <input type="text">
+                <br><br>*Nature of business <br><br>
+                <input type="text">
+                <br><br> *current post title <br><br>
+                <input type="text">
+                <br><br>*Date appointed <br><br>
+                <input type="date" name="date" id="date">
+                <br><br>*Grade/salary range <br><br>
+                <input type="text">
+                <br><br>*Current Salary <br><br>
+                <input type="text">
+                <br><br>*Reasing For Leaving <br><br>
+                <input type="text">
+            </div>
+
+            <br><br><br>
+            <h3>*41.Brief outline of duties in your current or most recent job</h3> <br><br>
+
+            <input type="text">
+            <br><br>42.*Pevious Employment (Please incluse all full time and part time positions.)Please enter NA where
+            not applicable.
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employer</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Job Title</th>
+                            <th>Reason for Leaving</th>
+                            <th>Document Attached</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="file"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="tel"></td>
+                            <td><input type="file"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+            <h3>43.*Breaks in Employement History</h3>
+            <h5>if you have had any break in Employement give details of these periods and your activities during these
+                times e.g unemployment,carrer break,voluntary work,training.</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Reason For Break</th>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="tel"></td>
+                        <td><input type="tel"></td>
+                        <td><input type="tel"></td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="tel"></td>
+                        <td><input type="tel"></td>
+                        <td><input type="tel"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <br><br>
+            <div class="travel">
+                <h3>44. *Ability to travel(if requied)</h3>
+                <br>
+                <h4>Do you have driving licence?</h4>
+                <select name="drive" id="drive">
+                    <option value="">select option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+                <br><br>
+
+                <br>
+                <h4>Do you have to access to a vehicle which you are able to use for work?</h4>
+                <select name="drive" id="vehicle">
+                    <option value="">select option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+                <br><br>
+
+                <br>
+                <h4>If not,able to travel, for work purposes, by another menas of transport?</h4>
+                <select name="drive" id="work">
+                    <option value="">select option</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+
+
+            </div>
+            <br><br>
+            <br>
+            <h3>45. *References</h3>
+            <h5>Please give the name and addresses of your two referees. Applicants must ensure referees consent to be
+                contacted and for reference information to be held for a period of 6 months.</h5>
+            <div class="reference">
+                <br> <br>*Name <br><br>
+                <input type="text">
+
+                <br><br>*Address <br> <br>
+                <input type="text">
+                <br><br>*Position <br><br>
+                <input type="text">
+                <br><br>Telephone Number <br><br>
+                <input type="text">
+                <br><br>*Relationship between referee and Applicants <br><br>
+                <input type="text">
+                <br><br>*Period of time applicant known to referee <br><br>
+                <input type="text">
+                <br><br> *email <br><br>
+                <input type="email" name="" id="">
+                <br> <br>*Name <br><br>
+                <input type="text">
+
+                <br><br>*Address <br> <br>
+                <input type="text">
+                <br><br>*Position <br><br>
+                <input type="text">
+                <br><br>Telephone Number <br><br>
+                <input type="text">
+                <br><br>*Relationship between referee and Applicants <br><br>
+                <input type="text">
+                <br><br>*Period of time applicant known to referee <br><br>
+                <input type="text">
+                <br><br> *email <br><br>
+                <input type="email" name="" id="">
+
+
+
+            </div>
+           <br><br> <h3>*Note</h3>
+            <ol type="i">
+                <li>Referees will be contacted before interviews.</li>
+                <li>If either of your referees know you by another name please give details.</li>
+                <li>The school may contact other previous employers for a reference.</li>
+                <li>References will not be accepted from relatives or from people writing solely in the capacity of friends.</li>
+
+
+            </ol>
+            <br><br><h3>*Declaration</h3>
+            <div class="Declaration">
+              <input type="checkbox" name="box" id="checkbox" required>  I certify that the information I have supplied on this form is accurate and true to the best of my knowledge. I declare that all required documents attached are a true copy of my original certificates.
+            </div>
+            <div>
+                <br>
+                <input type="submit" value="Submit">
+            </div>
+
+
+        </form>
+    </div>
+    <script src="/job form/script.js"></script>
+</body>
+
+</html>
